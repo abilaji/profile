@@ -31,7 +31,7 @@ nav {
     width: 400px;
     text-transform: uppercase;
   }
-  ul {
+  .menu {
     display: flex;
     justify-content: space-between;
     width: 30%;
@@ -52,6 +52,37 @@ nav {
         margin-bottom: 10px;
         border-radius: 1.5px;
       }
+    }
+  }
+
+  .menu-togle {
+    display: none;
+    margin-top: 13px;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+
+    span {
+      display: block;
+      width: 28px;
+      height: 3px;
+      background-color: $color-01;
+      border-radius: 5px;
+    }
+  }
+}
+
+// Tablet
+
+// Smartphone
+@media screen and (max-width: 670px) {
+  nav {
+    .menu {
+      display: none;
+    }
+    .menu-togle {
+      display: flex;
+      cursor: pointer;
     }
   }
 }

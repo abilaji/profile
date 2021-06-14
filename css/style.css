@@ -24,28 +24,52 @@ nav .logo {
   width: 400px;
   text-transform: uppercase;
 }
-nav ul {
+nav .menu {
   display: flex;
   justify-content: space-between;
   width: 30%;
   text-transform: capitalize;
   padding: 15px 0;
 }
-nav ul li {
+nav .menu li {
   list-style: none;
 }
-nav ul a {
+nav .menu a {
   color: #0a002c;
   list-style: none;
   text-decoration: none;
 }
-nav ul a:hover {
+nav .menu a:hover {
   content: "";
   display: block;
   border-bottom: 3px solid;
   padding-bottom: 5px;
   margin-bottom: 10px;
   border-radius: 1.5px;
+}
+nav .menu-togle {
+  display: none;
+  margin-top: 13px;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+}
+nav .menu-togle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #0a002c;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 670px) {
+  nav .menu {
+    display: none;
+  }
+  nav .menu-togle {
+    display: flex;
+    cursor: pointer;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
