@@ -62,7 +62,13 @@ nav .menu-togle span {
   border-radius: 5px;
 }
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 360px) {
+  nav {
+    background-color: palegreen;
+  }
+  nav .logo {
+    width: 280px;
+  }
   nav .menu {
     display: none;
   }
