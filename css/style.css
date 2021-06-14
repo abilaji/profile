@@ -47,31 +47,54 @@ nav .menu a:hover {
   margin-bottom: 10px;
   border-radius: 1.5px;
 }
-nav .menu-togle {
+nav #menuTogle {
   display: none;
-  margin-top: 13px;
-  flex-direction: column;
-  height: 20px;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
 }
-nav .menu-togle span {
-  display: block;
+nav #menuTogle::before {
+  content: "";
+  position: absolute;
   width: 28px;
-  height: 3px;
-  background-color: #0a002c;
   border-radius: 5px;
+  height: 2.5px;
+  background-color: #0a002c;
+  transition: 0.2s;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 0 #0a002c;
+}
+nav #menuTogle::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  border-radius: 5px;
+  height: 2.5px;
+  background-color: #0a002c;
+  transition: 0.2s;
+  transform: translateY(10px);
+}
+nav #menuTogle.active::before {
+  transform: translateY(0) rotate(45deg);
+  box-shadow: 0 0 0 #0a002c;
+}
+nav #menuTogle.active::after {
+  transform: translateY(0) rotate(-45deg);
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 670px) {
   nav .logo {
     width: 280px;
+    margin-top: 10px;
+    font-size: 20px;
   }
   nav .menu {
     display: none;
   }
-  nav .menu-togle {
+  nav #menuTogle {
     display: flex;
-    cursor: pointer;
   }
 }
 
