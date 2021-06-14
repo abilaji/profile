@@ -63,9 +63,6 @@ nav .menu-togle span {
 }
 
 @media screen and (max-width: 360px) {
-  nav {
-    background-color: palegreen;
-  }
   nav .logo {
     width: 280px;
   }
