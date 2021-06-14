@@ -75,11 +75,11 @@ nav {
 // Tablet
 
 // Smartphone
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 360px) {
   nav {
     .logo {
-      margin-top: 3px;
-      width: 300px;
+      // margin-top: 3px;
+      width: 280px;
     }
     .menu {
       display: none;
