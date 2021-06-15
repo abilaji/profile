@@ -110,15 +110,29 @@ nav {
       position: absolute;
       width: 100%;
       right: 0;
-      top: 0;
+      top: 5vh;
       justify-content: space-evenly;
       align-items: center;
-      height: 100vh;
+      height: 50vh;
       flex-direction: column;
       background-color: #f0f0f0;
       z-index: -2;
       transform: translate(0, -100%);
       transition: all 0.5s;
+      li {
+        padding: 10px 100%;
+        height: 20px;
+        &:hover {
+          background-color: #88e0e0;
+          color: $color-02;
+        }
+        a {
+          &:hover {
+            color: $color-02;
+            display: none;
+          }
+        }
+      }
     }
     ul.active {
       transform: translateX(0);
@@ -131,9 +145,5 @@ nav {
     .menuTogle {
       display: flex;
     }
-  }
-  .jumbotron .content.active {
-    transform: translateY(250px);
-    transition: all 1s;
   }
 }
