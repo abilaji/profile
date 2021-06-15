@@ -1,10 +1,9 @@
 const togles = document.querySelector('.menuTogle');
 const menuBar = document.querySelector('nav ul');
 
-togles.onclick = function(){
+togles.addEventListener('click', () => {
   togles.classList.toggle('active')
-};
-
-togles.addEventListener("click", function(){
-  menuBar.classList.toggle('active');
-});
+})
+togles.addEventListener("click", () => {
+  menuBar.classList.toggle('active')
+})
