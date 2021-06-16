@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200;500&family=Poppins:wght@400;600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,24 +8,31 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #cfcfcf;
   overflow-x: hidden;
+  margin-bottom: 1000px;
 }
 
 nav {
   display: flex;
+  position: fixed;
   justify-content: space-around;
   width: 100%;
-  height: 50px;
-  background-color: #ffffff;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  z-index: 10;
 }
 nav .logo {
   font-size: 28px;
   color: #0a002c;
   font-family: "Kanit", sans-serif;
-  font-weight: normal;
-  padding: 2px 0;
+  font-weight: 400;
+  padding-top: 8px;
+  align-items: center;
   width: 300px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 nav ul {
   display: flex;
@@ -86,24 +94,77 @@ nav .menuTogle.active::after {
   transform: translateY(0) rotate(-45deg);
 }
 
+.jumbotron {
+  width: 100%;
+  height: 575px;
+  background-image: url("/assets/img/banner-bg-01.jpg");
+  background-size: cover;
+}
+.jumbotron::after {
+  content: "";
+  display: block;
+  width: 75%;
+  height: 100%;
+  background-image: linear-gradient(to right, #fafaff, rgba(0, 0, 0, 0));
+  position: relative;
+  bottom: 0;
+}
+.jumbotron .content {
+  position: absolute;
+  color: #0a002c;
+  margin: 25vh 12%;
+  font-family: "Poppins", sans-serif;
+  z-index: 1;
+}
+.jumbotron .content h1 {
+  font-weight: 600;
+  font-size: 2.8em;
+  text-transform: capitalize;
+}
+.jumbotron .content h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-top: -10px;
+}
+.jumbotron .content p {
+  display: block;
+  color: #464646;
+  width: 390px;
+  word-spacing: 4px;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
 @media screen and (max-width: 670px) {
+  nav {
+    position: unset;
+    background-color: #ffffff;
+    backdrop-filter: inherit;
+  }
   nav ul {
     position: absolute;
     width: 100%;
     right: 0;
-    top: 3vh;
+    top: 8vh;
     justify-content: space-evenly;
-    align-items: center;
-    height: 50vh;
+    text-align: center;
     flex-direction: column;
-    background-color: #f0f0f0;
-    z-index: -2;
+    background: rgba(58, 145, 210, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     transform: translate(0, -100%);
     transition: all 0.5s;
+    z-index: -1;
   }
   nav ul li {
-    padding: 15px 46%;
+    position: relative;
+    padding: 15px 45%;
     height: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 20;
   }
   nav ul li:hover {
     background-color: #88e0e0;
@@ -115,6 +176,7 @@ nav .menuTogle.active::after {
   }
   nav ul.active {
     transform: translateX(0);
+    z-index: -10;
   }
   nav .logo {
     width: 300px;
@@ -123,6 +185,29 @@ nav .menuTogle.active::after {
   }
   nav .menuTogle {
     display: flex;
+  }
+
+  section {
+    position: relative;
+    z-index: -20;
+  }
+  section .jumbotron {
+    position: absolute;
+    height: 380px;
+    background-position-x: -50px;
+  }
+  section .jumbotron::after {
+    width: 100%;
+    background-image: linear-gradient(to bottom, #fafaff, rgba(0, 0, 0, 0));
+  }
+  section .jumbotron .content {
+    width: 100%;
+    margin: 70px auto;
+    text-align: center;
+  }
+  section .jumbotron .content p {
+    display: block;
+    margin: 0 auto;
   }
 }
 
