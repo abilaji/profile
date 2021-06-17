@@ -155,7 +155,7 @@ nav {
 }
 
 // Tablet
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 920px) {
   nav {
     ul {
       width: 40%;
@@ -163,9 +163,9 @@ nav {
   }
   .jumbotron {
     background-position-x: -80px;
-    height: 42vh;
+    height: 100vh;
     .content {
-      margin: 150px 80px;
+      margin: 150px 60px;
     }
   }
 }
@@ -179,9 +179,9 @@ nav {
     ul {
       position: absolute;
       width: 100%;
-      right: 0;
+      // right: 0;
       top: 8vh;
-      justify-content: space-evenly;
+      // justify-content: space-evenly;
       text-align: center;
       flex-direction: column;
       background: rgba(58, 145, 210, 0.25);
@@ -255,8 +255,11 @@ nav {
 @media screen and (max-width: 420px) {
   nav {
     ul {
-      top: 5vh;
-      align-items: center;
+      top: 6vh;
+      li {
+        align-items: center;
+        padding: 15px 40%;
+      }
     }
   }
   section {

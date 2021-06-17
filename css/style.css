@@ -130,17 +130,17 @@ nav .menuTogle.active::after {
   margin-top: 20px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 920px) {
   nav ul {
     width: 40%;
   }
 
   .jumbotron {
     background-position-x: -80px;
-    height: 42vh;
+    height: 100vh;
   }
   .jumbotron .content {
-    margin: 150px 80px;
+    margin: 150px 60px;
   }
 }
 @media screen and (max-width: 670px) {
@@ -152,9 +152,7 @@ nav .menuTogle.active::after {
   nav ul {
     position: absolute;
     width: 100%;
-    right: 0;
     top: 8vh;
-    justify-content: space-evenly;
     text-align: center;
     flex-direction: column;
     background: rgba(58, 145, 210, 0.25);
@@ -219,8 +217,11 @@ nav .menuTogle.active::after {
 }
 @media screen and (max-width: 420px) {
   nav ul {
-    top: 5vh;
+    top: 6vh;
+  }
+  nav ul li {
     align-items: center;
+    padding: 15px 40%;
   }
 
   section .jumbotron {
