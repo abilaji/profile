@@ -130,12 +130,6 @@ nav .menuTogle.active::after {
   margin-top: 20px;
 }
 
-@media screen and (max-width: 1080px) {
-  section .content {
-    left: -20px;
-    top: 50px;
-  }
-}
 @media screen and (max-width: 920px) {
   nav ul {
     width: 40%;
