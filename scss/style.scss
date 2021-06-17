@@ -17,7 +17,6 @@ body {
   // overflow untuk menyembynikan apa bila ada yg offside
   overflow-x: hidden;
   margin-bottom: 1000px;
-  max-width: 100%;
 }
 
 nav {
@@ -256,12 +255,12 @@ nav {
 @media screen and (max-width: 420px) {
   nav {
     ul {
+      top: 5vh;
       align-items: center;
     }
   }
   section {
     .jumbotron {
-      width: 100%;
       height: 320px;
       background-position-x: -300px;
       .content {
