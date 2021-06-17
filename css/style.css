@@ -155,9 +155,10 @@ nav .menuTogle.active::after {
     top: 8vh;
     text-align: center;
     flex-direction: column;
-    background: rgba(58, 145, 210, 0.25);
+    background: rgba(3, 0, 12, 0.25);
     backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     transform: translate(0, -100%);
     transition: all 0.5s;
     z-index: -1;
@@ -174,7 +175,8 @@ nav .menuTogle.active::after {
     z-index: 20;
   }
   nav ul li:hover {
-    background-color: #88e0e0;
+    background: #cdfafa;
+    background: linear-gradient(0deg, #cdfafa 0%, #88e0e0 100%);
   }
   nav ul li a:hover {
     display: none;
