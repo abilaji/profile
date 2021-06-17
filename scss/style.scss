@@ -17,6 +17,7 @@ body {
   // overflow untuk menyembynikan apa bila ada yg offside
   overflow-x: hidden;
   margin-bottom: 1000px;
+  max-width: 100%;
 }
 
 nav {
@@ -148,14 +149,14 @@ nav {
       color: #464646;
       width: 390px;
       word-spacing: 4px;
-      font-size: 18px;
+      font-size: 1.1em;
       margin-top: 20px;
     }
   }
 }
 
 // Tablet
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1024px) {
   nav {
     ul {
       width: 40%;
@@ -165,7 +166,7 @@ nav {
     background-position-x: -80px;
     height: 42vh;
     .content {
-      margin: 100px 60px;
+      margin: 150px 80px;
     }
   }
 }
@@ -252,10 +253,9 @@ nav {
   }
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 420px) {
   nav {
     ul {
-      top: 6vh;
       align-items: center;
     }
   }
@@ -272,7 +272,12 @@ nav {
           font-size: 0.8em;
         }
         h1 {
-          font-size: 2em;
+          font-size: 1.8em;
+          margin-bottom: 5px;
+        }
+        p {
+          margin-top: 12px;
+          width: auto;
         }
       }
     }

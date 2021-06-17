@@ -9,6 +9,7 @@ body {
   background-color: #cfcfcf;
   overflow-x: hidden;
   margin-bottom: 1000px;
+  max-width: 100%;
 }
 
 nav {
@@ -126,11 +127,11 @@ nav .menuTogle.active::after {
   color: #464646;
   width: 390px;
   word-spacing: 4px;
-  font-size: 18px;
+  font-size: 1.1em;
   margin-top: 20px;
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1024px) {
   nav ul {
     width: 40%;
   }
@@ -140,7 +141,7 @@ nav .menuTogle.active::after {
     height: 42vh;
   }
   .jumbotron .content {
-    margin: 100px 60px;
+    margin: 150px 80px;
   }
 }
 @media screen and (max-width: 670px) {
@@ -217,9 +218,8 @@ nav .menuTogle.active::after {
     margin: 0 auto;
   }
 }
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 420px) {
   nav ul {
-    top: 6vh;
     align-items: center;
   }
 
@@ -237,7 +237,12 @@ section .jumbotron .content p {
     font-size: 0.8em;
   }
   section .jumbotron .content h1 {
-    font-size: 2em;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+  }
+  section .jumbotron .content p {
+    margin-top: 12px;
+    width: auto;
   }
 }
 
