@@ -150,11 +150,37 @@ nav.sticky {
       font-weight: 600;
       font-size: 2.8em;
       text-transform: capitalize;
+      span {
+        color: #107020;
+      }
     }
     h3 {
       font-size: 1.5em;
       font-weight: 700;
       margin-top: -10px;
+      span.cursor {
+        display: inline-block;
+        width: 2px;
+        height: 1.3em;
+        background-color: $color-01;
+        margin-left: -0.2rem;
+        animation: blink 1s infinite;
+      }
+
+      span.typing {
+        animation: none;
+      }
+      @keyframes blink {
+        0% {
+          background-color: $color-01;
+        }
+        50% {
+          background-color: transparent;
+        }
+        100% {
+          background-color: $color-01;
+        }
+      }
     }
     p {
       display: block;
@@ -302,6 +328,9 @@ nav.sticky {
         h1 {
           font-size: 1.8em;
           margin-bottom: 5px;
+        }
+        h3 {
+          font-size: 1em;
         }
         p {
           margin-top: 12px;
