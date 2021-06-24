@@ -120,12 +120,12 @@
           .content-frontend {
             margin-bottom: 5vh;
             .frontend {
-              width: 100%;
+              @include res-skill();
             }
           }
           .content-desain {
             .desain {
-              width: 100%;
+              @include res-skill();
             }
           }
         }
@@ -188,11 +188,11 @@
       margin-bottom: 50px;
       .content-skill {
         .warp-content {
-          margin-top: 15vh !important;
+          margin-top: 10vh !important;
           .content-frontend {
             margin-bottom: 5vh;
             .frontend {
-              width: 100%;
+              @include res-skill();
               .f-code {
                 h2 {
                   padding-right: 10px;
@@ -202,7 +202,7 @@
           }
           .content-desain {
             .desain {
-              width: 100%;
+              @include res-skill();
               .d-code {
                 h2 {
                   padding-right: 10px;

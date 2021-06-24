@@ -115,3 +115,7 @@ $font-18: 18px;
   height: 10px;
   border-radius: 10px;
 }
+
+@mixin res-skill() {
+  width: 94%;
+}

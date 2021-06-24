@@ -804,10 +804,10 @@ section .container .skills .content-skill .content-desain .showDesain {
     margin-bottom: 5vh;
   }
   section .skills .content-skill .warp-content .content-frontend .frontend {
-    width: 100%;
+    width: 94%;
   }
   section .skills .content-skill .warp-content .content-desain .desain {
-    width: 100%;
+    width: 94%;
   }
 }
 @media screen and (max-width: 420px) {
@@ -853,19 +853,19 @@ section .jumbotron .content p {
     margin-bottom: 50px;
   }
   section .skills .content-skill .warp-content {
-    margin-top: 15vh !important;
+    margin-top: 10vh !important;
   }
   section .skills .content-skill .warp-content .content-frontend {
     margin-bottom: 5vh;
   }
   section .skills .content-skill .warp-content .content-frontend .frontend {
-    width: 100%;
+    width: 94%;
   }
   section .skills .content-skill .warp-content .content-frontend .frontend .f-code h2 {
     padding-right: 10px;
   }
   section .skills .content-skill .warp-content .content-desain .desain {
-    width: 100%;
+    width: 94%;
   }
   section .skills .content-skill .warp-content .content-desain .desain .d-code h2 {
     padding-right: 10px;
