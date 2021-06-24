@@ -5,36 +5,205 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>profile</title>
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <nav>
-      <h2 class="logo">abilaji</h2>
-      <ul >
-        <li><a href="#"> home </a></li>
-        <li><a href="#"> about </a></li>
-        <li><a href="#"> work </a></li>
-        <li><a href="#"> skill </a></li>
+      <!-- <div class="container"> -->
+      <h2 class="logo">abilaji <span></span></h2>
+      <ul>
+        <li><a href="#" onchange="return Scroll('home')"> home </a></li>
+        <li><a href="#about" onclick="return Scroll('about')"> about </a></li>
+        <li><a href="#skill" onclick="return Scroll('skill')"> skills </a></li>
+        <li><a href="#"> portfolio </a></li>
         <li><a href="#"> contact </a></li>
       </ul>
       <div class="menuTogle"></div>
+      <!-- </div> -->
     </nav>
-    
-    <section>
+
+    <section class="banner" id="home">
       <div class="jumbotron">
         <div class="content">
           <h1>hi, i'am <span>rio abilaji</span></h1>
           <h3>
             <span class="typed-text"></span>
-            <span class="cursor ">&nbsp;</span>
+            <span class="cursor">&nbsp;</span>
           </h3>
-          <p>High level experience in web design and development
-            knowledge, producing quality work.
+          <p>
+            High level experience in web design and development knowledge,
+            producing quality work.
           </p>
         </div>
       </div>
     </section>
 
+    <section>
+      <div class="container">
+        <div class="about" id="about">
+          <h1>About me</h1>
+          <h3>My introduction <span></span></h3>
+          <div class="content-about">
+            <img src="./assets/img/foto_about.png" alt="abilaji" />
+            <div class="text-about">
+              <h3>
+                Web developer, with extensive knowledge and years of experience,
+                working in web technologies and UI/UX desain, delivering quality
+                work.
+              </h3>
+              <div class="project-about">
+                <div class="number1">
+                  <h1>02+</h1>
+                  <p>Years experience</p>
+                </div>
+                <div class="number2">
+                  <h1>04+</h1>
+                  <p>Completed projects</p>
+                </div>
+                <div class="number3">
+                  <h1>03+</h1>
+                  <p>Companies worked</p>
+                </div>
+              </div>
+              <button>
+                Download CV
+                <img src="./assets/icon/download.svg" alt="download" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills" id="skill">
+          <div class="content-skill">
+            <h1>Skills</h1>
+            <h3>My technical level <span></span></h3>
+            <div class="warp-content">
+
+            <div class="content-frontend">
+              <div class="frontend">
+                <div class="f-code">
+                  <img src="./assets/icon/coding.svg" alt="code" />
+                  <h2>frontend </h2>
+                  <img
+                    class="dropbtn"
+                    onclick="myFunction()"
+                    src="./assets/icon/arrow-down.svg"
+                    alt="arrow"
+                  />
+                  <!-- <button onclick="myFunction()" class="dropbtn">down</button> -->
+                </div>
+                <div id="myDropdown" class="dropdown-content">
+                  <div class="html">
+                    <p>html</p>
+                      <div class="probar" >
+                        <div class="nth-probar"></div>
+                      </div>
+                    </div>
+
+                  <div class="css">
+                    <p>css</p>
+                      <div class="probar" >
+                        <div class="nth-probar"></div>
+                      </div>
+                    </div>
+
+                  <div class="js">
+                    <p>javascript</p>
+                      <div class="probar" >
+                        <div class="nth-probar"></div>
+                      </div>
+                    </div>
+
+                  <div class="sass">
+                    <p>sass</p>
+                      <div class="probar" >
+                        <div class="nth-probar"></div>
+                      </div>
+                    </div>
+
+                  <div class="react">
+                    <p>reactjs</p>
+                      <div class="probar" >
+                        <div class="nth-probar"></div>
+                      </div>
+                    </div>
+
+                  <div class="bootstrap">
+                    <p>bootstrap</p>
+                      <div class="probar" >
+                        <div class="nth-probar"></div>
+                      </div>
+                    </div>
+
+                  <div class="github">
+                    <p>github</p>
+                      <div class="probar" >
+                        <div class="nth-probar"></div>
+                      </div>
+                  
+                    </div>
+                  <div class="restapi">
+                    <p>restapi</p>
+                      <div class="probar" >
+                        <div class="nth-probar"></div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                </div>
+                <div class="content-desain">              
+            
+                <div class="desain">
+                  <div class="d-code">
+                    <img class="btnDesain" src="./assets/icon/illustration.svg" alt="code" />
+                    <h2>designer </h2>
+                    <img
+                    class="dropDesain"
+                    onclick="desainList()"
+                    src="./assets/icon/arrow-down.svg"
+                    alt="arrow"
+                    />
+                  </div>
+                  <div id="dropdown" class="dropdownDesain">
+                    <div class="ps">
+                      <p>ps</p>
+                      <div class="probar" >
+                        <div class="nth-probar"></div>
+                      </div>
+                    </div>  
+                    <div class="ai">
+                      <p>ai</p>
+                        <div class="probar" >
+                          <div class="nth-probar"></div>
+                        </div>
+                      </div>  
+                    <div class="figma">
+                      <p>figma</p>
+                        <div class="probar" >
+                          <div class="nth-probar"></div>
+                        </div>
+                      </div>  
+                      
+                      <div class="adxd">
+                        <p>adobe xd</p>
+                          <div class="probar" >
+                            <div class="nth-probar"></div>
+                          </div>
+                        </div>  
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div class="test" style="text-align: center;">
+                  <h1>hallo world</h1>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="js/script.js"></script>
   </body>
 </html>

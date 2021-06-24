@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200;500&family=Poppins:wght@400;600&display=swap");
+// file scss
+$f-poppins: "Poppins", sans-serif;
+$f-kanit: "Kanit", sans-serif;
+$color-01: #0a002c;
+$color-02: #ffffff;
+$color-03: #107020;
+$color-grey: #464646;
+$bg-color-grey: rgba(255, 255, 255, 0.25);
+$bg-color-navy: rgba(3, 0, 12, 0.25);
+$font-28: 28px;
+$font-18: 18px;
+
+@mixin grd-transparant($bg-color) {
+  background: $bg-color;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(4px);
+  // border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+@mixin grd-color() {
+  background: rgb(205, 250, 250);
+  background: linear-gradient(
+    0deg,
+    rgba(205, 250, 250, 1) 0%,
+    rgba(136, 224, 224, 1) 100%
+  );
+}
+@mixin judul-h3() {
+  font-family: $f-poppins;
+  font-weight: normal;
+  font-size: 1.3em;
+  color: $color-grey;
+  span {
+    display: block;
+    border-bottom: 0.1rem solid $color-03;
+    padding-bottom: 0vh;
+    width: 8em;
+    margin: 0 auto;
+    top: 0;
+    height: 0;
+
+    &::after {
+      content: "";
+      color: $color-01;
+      position: absolute;
+      display: inherit;
+      border-bottom: 0.1rem solid;
+      padding-bottom: 0vh;
+      width: 4em;
+      z-index: 10;
+    }
+  }
+}
+
+@mixin judul-h1() {
+  font-family: $f-kanit;
+  font-size: 3em;
+  color: $color-01;
+}
+
+@mixin shadow-skills {
+  text-transform: capitalize;
+  color: $color-01;
+  font-weight: 200;
+  display: block;
+  width: 80vh;
+  background-color: #ffffff;
+  padding: 10px 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+@mixin img-skill {
+  img {
+    width: 1.8em;
+    // padding-right: 50px;
+    // background-color: bisque;
+    &.dropbtn {
+      cursor: pointer;
+      margin-left: 40%;
+      width: 1.5em;
+      // background-color: bisque;
+    }
+    &.dropDesain {
+      cursor: pointer;
+      margin-left: 40%;
+      width: 1.5em;
+    }
+  }
+}
+
+@mixin display-probar {
+  display: flex;
+  justify-content: space-between;
+  p {
+    padding-left: 10px;
+  }
+}
+@mixin probar() {
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 13px;
+  margin-top: 3px;
+  height: 9px;
+  width: 70%;
+  padding: 3px;
+}
+@mixin nth-probar($width) {
+  background-color: $color-03;
+  width: $width;
+  height: 10px;
+  border-radius: 10px;
+}

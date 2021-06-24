@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200;500&family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200;500&family=Poppins:wght@400;600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,28 +7,55 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #cfcfcf;
+  background-color: #f6faff;
   overflow-x: hidden;
   margin-bottom: 1000px;
 }
 
 nav {
-  width: 100%;
   display: flex;
   position: fixed;
+  width: 100%;
   justify-content: space-around;
   height: 60px;
-  z-index: 10;
+  z-index: 100;
+}
+nav.sticky {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  width: 100%;
+  height: 60px;
+}
+nav.sticky ul li a {
+  color: #0a002c;
+  font-weight: 600;
 }
 nav .logo {
   font-size: 28px;
   color: #0a002c;
   font-family: "Kanit", sans-serif;
   font-weight: 400;
-  padding-top: 8px;
+  padding-top: 2px;
   align-items: center;
-  width: 300px;
+  width: 400px;
   text-transform: capitalize;
+}
+nav .logo span {
+  display: block;
+  border-bottom: 0.4rem solid #107020;
+  padding-bottom: 0.1vh;
+  width: 3em;
+}
+nav .logo span::after {
+  content: "";
+  position: absolute;
+  display: inherit;
+  border-bottom: 0.4rem solid;
+  padding-bottom: 0.1vh;
+  width: 1.5em;
+  z-index: 10;
 }
 nav ul {
   display: flex;
@@ -60,6 +88,13 @@ nav .menuTogle {
   cursor: pointer;
   transition: 0.2s;
 }
+nav .menuTogle.active::before {
+  transform: translateY(0) rotate(45deg);
+  box-shadow: 0 0 0 #0a002c;
+}
+nav .menuTogle.active::after {
+  transform: translateY(0) rotate(-45deg);
+}
 nav .menuTogle::before {
   content: "";
   position: absolute;
@@ -81,60 +116,42 @@ nav .menuTogle::after {
   transition: 0.2s;
   transform: translateY(10px);
 }
-nav .menuTogle.active::before {
-  transform: translateY(0) rotate(45deg);
-  box-shadow: 0 0 0 #0a002c;
-}
-nav .menuTogle.active::after {
-  transform: translateY(0) rotate(-45deg);
-}
-
-nav.sticky {
-  width: 100%;
-  height: 60px;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-}
-nav.sticky ul li a {
-  color: #0a002c;
-  font-weight: 600;
-}
 
 .jumbotron {
   width: 100%;
-  height: 575px;
+  height: 560px;
   background-image: url("../assets/img/banner.png");
   background-size: cover;
 }
 .jumbotron::after {
   content: "";
   display: block;
-  width: 75%;
+  width: 80%;
   height: 100%;
-  background-image: linear-gradient(to right, #fafaff, rgba(0, 0, 0, 0));
-  position: relative;
+  margin-bottom: 0;
+  background: #e6e5e5;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 5%, white 100%);
+  position: absolute;
+  z-index: 1;
   bottom: 0;
 }
 .jumbotron .content {
   position: absolute;
   color: #0a002c;
-  margin: 25vh 12%;
+  margin: 25vh 10%;
   font-family: "Poppins", sans-serif;
-  z-index: 1;
+  z-index: 5;
 }
 .jumbotron .content h1 {
   font-weight: 600;
-  font-size: 2.8em;
+  font-size: 3.2em;
   text-transform: capitalize;
 }
 .jumbotron .content h1 span {
   color: #107020;
 }
 .jumbotron .content h3 {
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-weight: 700;
   margin-top: -10px;
 }
@@ -166,41 +183,549 @@ nav.sticky ul li a {
   width: 390px;
   word-spacing: 4px;
   font-size: 1.1em;
+  font-weight: normal;
   margin-top: 20px;
 }
 
-@media screen and (max-width: 920px) {
-  nav ul {
-    width: 40%;
-  }
-
-  .jumbotron {
-    background-position-x: -80px;
-    height: 100vh;
-  }
-  .jumbotron .content {
-    margin: 150px 60px;
-  }
+section .container {
+  margin-top: 30vh;
 }
+section .container .about {
+  text-align: center;
+}
+section .container .about h1 {
+  font-family: "Kanit", sans-serif;
+  font-size: 3em;
+  color: #0a002c;
+}
+section .container .about h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 1.3em;
+  color: #464646;
+}
+section .container .about h3 span {
+  display: block;
+  border-bottom: 0.1rem solid #107020;
+  padding-bottom: 0vh;
+  width: 8em;
+  margin: 0 auto;
+  top: 0;
+  height: 0;
+}
+section .container .about h3 span::after {
+  content: "";
+  color: #0a002c;
+  position: absolute;
+  display: inherit;
+  border-bottom: 0.1rem solid;
+  padding-bottom: 0vh;
+  width: 4em;
+  z-index: 10;
+}
+section .container .about .content-about {
+  margin-top: 12vh;
+  display: flex;
+  justify-content: center;
+}
+section .container .about .content-about img {
+  width: 18em;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+section .container .about .content-about .text-about {
+  margin-left: 100px;
+  width: 100vh;
+  text-align: left;
+}
+section .container .about .content-about .text-about button {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2em;
+  background-color: #107020;
+  border: none;
+  border-radius: 8px;
+  padding: 18px 34px;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: #26394d 0px 20px 30px -10px;
+}
+section .container .about .content-about .text-about button:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+section .container .about .content-about .text-about button:hover {
+  background-color: #00a149;
+}
+section .container .about .content-about .text-about button img {
+  border-radius: unset;
+  box-shadow: unset;
+  color: #ffffff !important;
+  width: 0.9em;
+  margin-left: 10px;
+}
+section .container .about .content-about .text-about button img svg path {
+  fill: ivory;
+}
+section .container .about .content-about .text-about .project-about {
+  display: flex;
+  margin: 10vh 0;
+  justify-content: space-between;
+}
+section .container .about .content-about .text-about .project-about h1 {
+  font-family: "Poppins", sans-serif;
+}
+section .container .about .content-about .text-about .project-about p {
+  display: block;
+  width: 6em;
+  text-align: center;
+}
+section .container .skills {
+  margin-top: 30vh;
+}
+section .container .skills .content-skill {
+  text-align: center;
+}
+section .container .skills .content-skill h1 {
+  font-family: "Kanit", sans-serif;
+  font-size: 3em;
+  color: #0a002c;
+}
+section .container .skills .content-skill h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 1.3em;
+  color: #464646;
+}
+section .container .skills .content-skill h3 span {
+  display: block;
+  border-bottom: 0.1rem solid #107020;
+  padding-bottom: 0vh;
+  width: 8em;
+  margin: 0 auto;
+  top: 0;
+  height: 0;
+}
+section .container .skills .content-skill h3 span::after {
+  content: "";
+  color: #0a002c;
+  position: absolute;
+  display: inherit;
+  border-bottom: 0.1rem solid;
+  padding-bottom: 0vh;
+  width: 4em;
+  z-index: 10;
+}
+section .container .skills .content-skill .warp-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20vh;
+}
+section .container .skills .content-skill .content-frontend {
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+}
+section .container .skills .content-skill .content-frontend .frontend {
+  text-transform: capitalize;
+  color: #0a002c;
+  font-weight: 200;
+  display: block;
+  width: 80vh;
+  background-color: #ffffff;
+  padding: 10px 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+section .container .skills .content-skill .content-frontend .frontend .f-code {
+  display: flex;
+  justify-content: space-around;
+}
+section .container .skills .content-skill .content-frontend .frontend .f-code img {
+  width: 1.8em;
+}
+section .container .skills .content-skill .content-frontend .frontend .f-code img.dropbtn {
+  cursor: pointer;
+  margin-left: 40%;
+  width: 1.5em;
+}
+section .container .skills .content-skill .content-frontend .frontend .f-code img.dropDesain {
+  cursor: pointer;
+  margin-left: 40%;
+  width: 1.5em;
+}
+section .container .skills .content-skill .content-frontend .frontend .f-code h2 {
+  padding-right: 50px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content {
+  display: none;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+  min-width: 160px;
+  text-align: left;
+  z-index: 1;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .html {
+  display: flex;
+  justify-content: space-between;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .html p {
+  padding-left: 10px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .html .probar {
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 13px;
+  margin-top: 3px;
+  height: 9px;
+  width: 70%;
+  padding: 3px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .html .probar .nth-probar {
+  background-color: #107020;
+  width: 85%;
+  height: 10px;
+  border-radius: 10px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .css {
+  display: flex;
+  justify-content: space-between;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .css p {
+  padding-left: 10px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .css .probar {
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 13px;
+  margin-top: 3px;
+  height: 9px;
+  width: 70%;
+  padding: 3px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .css .probar .nth-probar {
+  background-color: #107020;
+  width: 80%;
+  height: 10px;
+  border-radius: 10px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .js {
+  display: flex;
+  justify-content: space-between;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .js p {
+  padding-left: 10px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .js .probar {
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 13px;
+  margin-top: 3px;
+  height: 9px;
+  width: 70%;
+  padding: 3px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .js .probar .nth-probar {
+  background-color: #107020;
+  width: 60%;
+  height: 10px;
+  border-radius: 10px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .sass {
+  display: flex;
+  justify-content: space-between;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .sass p {
+  padding-left: 10px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .sass .probar {
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 13px;
+  margin-top: 3px;
+  height: 9px;
+  width: 70%;
+  padding: 3px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .sass .probar .nth-probar {
+  background-color: #107020;
+  width: 80%;
+  height: 10px;
+  border-radius: 10px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .react {
+  display: flex;
+  justify-content: space-between;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .react p {
+  padding-left: 10px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .react .probar {
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 13px;
+  margin-top: 3px;
+  height: 9px;
+  width: 70%;
+  padding: 3px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .react .probar .nth-probar {
+  background-color: #107020;
+  width: 50%;
+  height: 10px;
+  border-radius: 10px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .react {
+  display: flex;
+  justify-content: space-between;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .react p {
+  padding-left: 10px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .react .probar {
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 13px;
+  margin-top: 3px;
+  height: 9px;
+  width: 70%;
+  padding: 3px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .react .probar .nth-probar {
+  background-color: #107020;
+  width: 50%;
+  height: 10px;
+  border-radius: 10px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .bootstrap {
+  display: flex;
+  justify-content: space-between;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .bootstrap p {
+  padding-left: 10px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .bootstrap .probar {
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 13px;
+  margin-top: 3px;
+  height: 9px;
+  width: 70%;
+  padding: 3px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .bootstrap .probar .nth-probar {
+  background-color: #107020;
+  width: 70%;
+  height: 10px;
+  border-radius: 10px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .github {
+  display: flex;
+  justify-content: space-between;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .github p {
+  padding-left: 10px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .github .probar {
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 13px;
+  margin-top: 3px;
+  height: 9px;
+  width: 70%;
+  padding: 3px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .github .probar .nth-probar {
+  background-color: #107020;
+  width: 50%;
+  height: 10px;
+  border-radius: 10px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .restapi {
+  display: flex;
+  justify-content: space-between;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .restapi p {
+  padding-left: 10px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .restapi .probar {
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 13px;
+  margin-top: 3px;
+  height: 9px;
+  width: 70%;
+  padding: 3px;
+}
+section .container .skills .content-skill .content-frontend .dropdown-content .restapi .probar .nth-probar {
+  background-color: #107020;
+  width: 30%;
+  height: 10px;
+  border-radius: 10px;
+}
+section .container .skills .content-skill .content-frontend .show {
+  display: block;
+}
+section .container .skills .content-skill .content-desain .desain {
+  text-transform: capitalize;
+  color: #0a002c;
+  font-weight: 200;
+  display: block;
+  width: 80vh;
+  background-color: #ffffff;
+  padding: 10px 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+section .container .skills .content-skill .content-desain .desain .d-code {
+  display: flex;
+  justify-content: space-around;
+}
+section .container .skills .content-skill .content-desain .desain .d-code img {
+  width: 1.8em;
+}
+section .container .skills .content-skill .content-desain .desain .d-code img.dropbtn {
+  cursor: pointer;
+  margin-left: 40%;
+  width: 1.5em;
+}
+section .container .skills .content-skill .content-desain .desain .d-code img.dropDesain {
+  cursor: pointer;
+  margin-left: 40%;
+  width: 1.5em;
+}
+section .container .skills .content-skill .content-desain .desain .d-code h2 {
+  padding-right: 50px;
+}
+section .container .skills .content-skill .content-desain .dropdownDesain {
+  display: none;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+  min-width: 160px;
+  text-align: left;
+  z-index: 1;
+}
+section .container .skills .content-skill .content-desain .dropdownDesain .figma {
+  display: flex;
+  justify-content: space-between;
+}
+section .container .skills .content-skill .content-desain .dropdownDesain .figma p {
+  padding-left: 10px;
+}
+section .container .skills .content-skill .content-desain .dropdownDesain .figma .probar {
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 13px;
+  margin-top: 3px;
+  height: 9px;
+  width: 70%;
+  padding: 3px;
+}
+section .container .skills .content-skill .content-desain .dropdownDesain .figma .probar .nth-probar {
+  background-color: #107020;
+  width: 85%;
+  height: 10px;
+  border-radius: 10px;
+}
+section .container .skills .content-skill .content-desain .dropdownDesain .adxd {
+  display: flex;
+  justify-content: space-between;
+}
+section .container .skills .content-skill .content-desain .dropdownDesain .adxd p {
+  padding-left: 10px;
+}
+section .container .skills .content-skill .content-desain .dropdownDesain .adxd .probar {
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 13px;
+  margin-top: 3px;
+  height: 9px;
+  width: 70%;
+  padding: 3px;
+}
+section .container .skills .content-skill .content-desain .dropdownDesain .adxd .probar .nth-probar {
+  background-color: #107020;
+  width: 80%;
+  height: 10px;
+  border-radius: 10px;
+}
+section .container .skills .content-skill .content-desain .dropdownDesain .ai {
+  display: flex;
+  justify-content: space-between;
+}
+section .container .skills .content-skill .content-desain .dropdownDesain .ai p {
+  padding-left: 10px;
+}
+section .container .skills .content-skill .content-desain .dropdownDesain .ai .probar {
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 13px;
+  margin-top: 3px;
+  height: 9px;
+  width: 70%;
+  padding: 3px;
+}
+section .container .skills .content-skill .content-desain .dropdownDesain .ai .probar .nth-probar {
+  background-color: #107020;
+  width: 85%;
+  height: 10px;
+  border-radius: 10px;
+}
+section .container .skills .content-skill .content-desain .dropdownDesain .ps {
+  display: flex;
+  justify-content: space-between;
+}
+section .container .skills .content-skill .content-desain .dropdownDesain .ps p {
+  padding-left: 10px;
+}
+section .container .skills .content-skill .content-desain .dropdownDesain .ps .probar {
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 13px;
+  margin-top: 3px;
+  height: 9px;
+  width: 70%;
+  padding: 3px;
+}
+section .container .skills .content-skill .content-desain .dropdownDesain .ps .probar .nth-probar {
+  background-color: #107020;
+  width: 60%;
+  height: 10px;
+  border-radius: 10px;
+}
+section .container .skills .content-skill .content-desain .showDesain {
+  display: block;
+}
+
 @media screen and (max-width: 670px) {
   nav {
     position: unset;
     background-color: #ffffff;
-    backdrop-filter: inherit;
+    z-index: 100;
+  }
+  nav.sticky {
+    display: none;
+    transition: 2s;
   }
   nav ul {
     position: absolute;
     width: 100%;
+    right: 0;
     top: 8vh;
     text-align: center;
     flex-direction: column;
-    background: rgba(3, 0, 12, 0.25);
-    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    transform: translate(0, -100%);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    transform: translateX(-100%);
     transition: all 0.5s;
-    z-index: -1;
+    z-index: 1;
+  }
+  nav ul.active {
+    transform: translateX(0);
+    z-index: 10;
   }
   nav ul a {
     color: #0a002c;
@@ -220,30 +745,18 @@ nav.sticky ul li a {
   nav ul li a:hover {
     display: none;
   }
-  nav ul.active {
-    transform: translateX(0);
-    z-index: -10;
-  }
   nav .logo {
     width: 300px;
     margin-top: 10px;
     font-size: 20px;
+    z-index: 100;
   }
   nav .menuTogle {
     display: flex;
+    z-index: 100;
   }
 
-  nav.sticky {
-    display: none;
-    transition: 2s;
-  }
-
-  section {
-    position: relative;
-    z-index: -20;
-  }
   section .jumbotron {
-    position: absolute;
     height: 380px;
     background-position-x: -50px;
   }
@@ -259,6 +772,42 @@ nav.sticky ul li a {
   section .jumbotron .content p {
     display: block;
     margin: 0 auto;
+  }
+
+  section .container {
+    width: 90%;
+    margin: 10vh auto;
+    display: block;
+  }
+  section .container .about .content-about {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+  }
+  section .container .about .content-about img {
+    width: 40vh;
+  }
+  section .container .about .content-about .text-about {
+    display: block;
+    width: 100%;
+    margin-top: 3vh;
+    margin-left: 0;
+    text-align: center;
+  }
+  section .container .about .content-about .project-about {
+    justify-content: space-evenly;
+  }
+  section .skills .content-skill .warp-content {
+    flex-direction: column;
+  }
+  section .skills .content-skill .warp-content .content-frontend {
+    margin-bottom: 5vh;
+  }
+  section .skills .content-skill .warp-content .content-frontend .frontend {
+    width: 85vh;
+  }
+  section .skills .content-skill .warp-content .content-desain .desain {
+    width: 85vh;
   }
 }
 @media screen and (max-width: 420px) {
@@ -292,6 +841,34 @@ section .jumbotron .content p {
   section .jumbotron .content p {
     margin-top: 12px;
     width: auto;
+  }
+
+  section .container .about {
+    margin-bottom: -50px;
+  }
+  section .container .about .content-about .text-about {
+    font-size: 0.8em;
+  }
+  section .skills {
+    margin-bottom: 50px;
+  }
+  section .skills .content-skill .warp-content {
+    margin-top: 15vh !important;
+  }
+  section .skills .content-skill .warp-content .content-frontend {
+    margin-bottom: 5vh;
+  }
+  section .skills .content-skill .warp-content .content-frontend .frontend {
+    width: 67vh;
+  }
+  section .skills .content-skill .warp-content .content-frontend .frontend .f-code h2 {
+    padding-right: 10px;
+  }
+  section .skills .content-skill .warp-content .content-desain .desain {
+    width: 67vh;
+  }
+  section .skills .content-skill .warp-content .content-desain .desain .d-code h2 {
+    padding-right: 10px;
   }
 }
 

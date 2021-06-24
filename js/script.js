@@ -59,3 +59,74 @@ document.addEventListener('DOMContentLoaded', function(){
 //   }
 // }
 // typing();
+
+//smoothScroll
+let posY=0;
+const jarak=15;
+
+function Scroll(id){
+  const target = document.getElementById(id).offsetTop;
+
+  const scrollAnimate = setTimeout(function(){
+    Scroll(id);
+  }, 5);
+
+    posY = posY + jarak;
+    // pengkondisian
+    if(posY >= target){
+      clearTimeout(scrollAnimate);
+      posY=0;
+    } 
+    else{
+      window.scroll(0, posY);
+    }
+    return false;
+} 
+// const content = document.querySelector('.main-content');
+// scrollnav.init(content);
+
+// skills effect
+
+// const listArrow = document.querySelector('.arrow');
+
+// listArrow.addEventListener('click', ()=>{
+//   listArrow.classList.toggle('menuActive');
+// })
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+//Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    const dropdowns = document.getElementsByClassName("dropdown-content");
+    let i;
+    for (i = 0; i < dropdowns.length; i++) {
+      const openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
+function desainList(){
+  document.getElementById("dropdown").classList.toggle('showDesain');
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.dropDesain')) {
+    const drop_downs = document.getElementsByClassName("dropdownDesain");
+    let i;
+    for (i = 0; i < drop_downs.length; i++) {
+      const openDropdown = drop_downs[i];
+      if (openDropdown.classList.contains('showDesain')) {
+        openDropdown.classList.remove('showDesain');
+      }
+    }
+  }
+}
