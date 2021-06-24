@@ -846,6 +846,9 @@ section .jumbotron .content p {
   section .container .about {
     margin-bottom: -50px;
   }
+  section .container .about .content-about img {
+    width: 30vh;
+  }
   section .container .about .content-about .text-about {
     font-size: 0.8em;
   }
