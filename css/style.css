@@ -697,6 +697,161 @@ section .container .skills .content-skill .content-desain .dropdownDesain .ps .p
 section .container .skills .content-skill .content-desain .showDesain {
   display: block;
 }
+section .portfolio .container .warp-card {
+  display: flex;
+  justify-content: space-around;
+}
+section .portfolio .container .warp-card .row {
+  display: block;
+  width: 25%;
+  margin-top: 10vh;
+  height: auto;
+  height: 400px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #f6faff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+section .portfolio .container .warp-card .row:hover {
+  transform: scale(1.02);
+  transition: 0.5s;
+}
+section .portfolio .container .warp-card .row .col-01 .back-banner {
+  position: relative;
+  height: 280px;
+  z-index: 2;
+}
+section .portfolio .container .warp-card .row .col-01 .back-banner img {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  height: 250px;
+}
+section .portfolio .container .warp-card .row .col-01 .content {
+  width: auto;
+  display: block;
+  width: 90%;
+  margin-left: 15px;
+}
+section .portfolio .container .warp-card .row .col-01 .content h3 {
+  text-align: left;
+  font-weight: normal;
+  font-family: "Kanit", sans-serif;
+  color: #107020;
+  text-transform: capitalize;
+  font-size: 1.6em;
+}
+section .portfolio .container .warp-card .row .col-01 .content p {
+  display: inline-block;
+  text-align: left;
+  width: auto;
+  font-size: 0.9em;
+}
+section .portfolio .container .warp-card .row .col-01 .content h4 {
+  display: flex;
+  font-size: 0.9em;
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+section .portfolio .container .warp-card .row .col-01 .content h4 a {
+  font-weight: normal;
+  color: #0000ff;
+  text-decoration: none;
+}
+section .portfolio .container .warp-card .row .col-01 .content h4 img {
+  margin-left: 8px;
+  width: 15px;
+  height: auto;
+}
+section .portfolio .container .warp-card .row .col-02 .back-banner {
+  position: relative;
+  height: 280px;
+  z-index: 2;
+}
+section .portfolio .container .warp-card .row .col-02 .back-banner img {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  height: 250px;
+}
+section .portfolio .container .warp-card .row .col-02 .content {
+  display: block;
+  width: 90%;
+  margin-left: 15px;
+}
+section .portfolio .container .warp-card .row .col-02 .content h3 {
+  text-align: left;
+  font-weight: normal;
+  font-family: "Kanit", sans-serif;
+  color: #107020;
+  text-transform: capitalize;
+  font-size: 1.6em;
+}
+section .portfolio .container .warp-card .row .col-02 .content p {
+  display: inline-block;
+  text-align: left;
+  width: auto;
+  font-size: 0.9em;
+}
+section .portfolio .container .warp-card .row .col-02 .content h4 {
+  display: flex;
+  font-size: 0.9em;
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+section .portfolio .container .warp-card .row .col-02 .content h4 a {
+  font-weight: normal;
+  color: #0000ff;
+  text-decoration: none;
+}
+section .portfolio .container .warp-card .row .col-02 .content h4 img {
+  margin-left: 8px;
+  width: 15px;
+  height: auto;
+}
+section .portfolio .container .warp-card .row .col-03 .back-banner {
+  position: relative;
+  height: 280px;
+  z-index: 2;
+}
+section .portfolio .container .warp-card .row .col-03 .back-banner img {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  height: 250px;
+}
+section .portfolio .container .warp-card .row .col-03 .content {
+  display: block;
+  width: 90%;
+  margin-left: 15px;
+}
+section .portfolio .container .warp-card .row .col-03 .content h3 {
+  text-align: left;
+  font-weight: normal;
+  font-family: "Kanit", sans-serif;
+  color: #107020;
+  text-transform: capitalize;
+  font-size: 1.6em;
+}
+section .portfolio .container .warp-card .row .col-03 .content p {
+  display: inline-block;
+  text-align: left;
+  width: auto;
+  font-size: 0.9em;
+}
+section .portfolio .container .warp-card .row .col-03 .content h4 {
+  display: flex;
+  font-size: 0.9em;
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+section .portfolio .container .warp-card .row .col-03 .content h4 a {
+  font-weight: normal;
+  color: #0000ff;
+  text-decoration: none;
+}
+section .portfolio .container .warp-card .row .col-03 .content h4 img {
+  margin-left: 8px;
+  width: 15px;
+  height: auto;
+}
 
 @media screen and (max-width: 670px) {
   nav {
@@ -809,6 +964,62 @@ section .container .skills .content-skill .content-desain .showDesain {
   section .skills .content-skill .warp-content .content-desain .desain {
     width: 94%;
   }
+  section .portfolio .container .warp-card {
+    align-items: center;
+    flex-direction: column;
+  }
+  section .portfolio .container .warp-card .row {
+    display: block;
+    width: 80%;
+  }
+  section .portfolio .container .warp-card .row .col-01 {
+    width: 100%;
+  }
+  section .portfolio .container .warp-card .row .col-01 .back-banner {
+    max-width: 670px;
+    width: 100%;
+  }
+  section .portfolio .container .warp-card .row .col-01 .content {
+    width: auto;
+  }
+  section .portfolio .container .warp-card .row .col-01 .content p {
+    font-size: 1.1em;
+  }
+  section .portfolio .container .warp-card .row .col-01 .content h4 {
+    margin-top: 10px;
+  }
+  section .portfolio .container .warp-card .row .col-02 {
+    width: 100%;
+  }
+  section .portfolio .container .warp-card .row .col-02 .back-banner {
+    max-width: 670px;
+    width: 100%;
+  }
+  section .portfolio .container .warp-card .row .col-02 .back-banner .content {
+    width: auto;
+  }
+  section .portfolio .container .warp-card .row .col-02 .back-banner .content p {
+    font-size: 1.1em;
+  }
+  section .portfolio .container .warp-card .row .col-02 .back-banner .content h4 {
+    margin-top: 10px;
+  }
+  section .portfolio .container .warp-card .row .col-03 {
+    width: 100%;
+  }
+  section .portfolio .container .warp-card .row .col-03 .back-banner {
+    max-width: 670px;
+    width: 100%;
+  }
+  section .portfolio .container .warp-card .row .col-03 .back-banner .content {
+    width: auto;
+  }
+  section .portfolio .container .warp-card .row .col-03 .back-banner .content p {
+    font-size: 1.1em;
+  }
+  section .portfolio .container .warp-card .row .col-03 .back-banner .content h4 {
+    margin-top: 10px;
+  }
 }
 @media screen and (max-width: 420px) {
   nav ul {
@@ -872,6 +1083,51 @@ section .jumbotron .content p {
   }
   section .skills .content-skill .warp-content .content-desain .desain .d-code h2 {
     padding-right: 10px;
+  }
+  section .portfolio .container .warp-card .row .col-01 .back-banner img {
+    width: 100%;
+  }
+  section .portfolio .container .warp-card .row .col-01 .content p {
+    display: block;
+    width: 95%;
+    font-size: 0.8em;
+  }
+  section .portfolio .container .warp-card .row .col-01 .content h4 {
+    font-size: 0.7em;
+    margin-top: 12px;
+  }
+  section .portfolio .container .warp-card .row .col-01 .content h4 img {
+    width: 10px;
+  }
+  section .portfolio .container .warp-card .row .col-02 .back-banner img {
+    width: 100%;
+  }
+  section .portfolio .container .warp-card .row .col-02 .back-banner .content p {
+    display: block;
+    width: 95%;
+    font-size: 0.8em;
+  }
+  section .portfolio .container .warp-card .row .col-02 .back-banner .content h4 {
+    font-size: 0.7em;
+    margin-top: 12px;
+  }
+  section .portfolio .container .warp-card .row .col-02 .back-banner .content h4 img {
+    width: 10px;
+  }
+  section .portfolio .container .warp-card .row .col-03 .back-banner img {
+    width: 100%;
+  }
+  section .portfolio .container .warp-card .row .col-03 .back-banner .content p {
+    display: block;
+    width: 95%;
+    font-size: 0.8em;
+  }
+  section .portfolio .container .warp-card .row .col-03 .back-banner .content h4 {
+    font-size: 0.7em;
+    margin-top: 12px;
+  }
+  section .portfolio .container .warp-card .row .col-03 .back-banner .content h4 img {
+    width: 10px;
   }
 }
 
