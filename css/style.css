@@ -720,11 +720,12 @@ section .portfolio .container .warp-card .row:hover {
 section .portfolio .container .warp-card .row .col-01 {
   overflow: hidden;
   height: 240px;
-  background-color: #f1f102;
+  border-radius: 60px 0px 0px 0px;
+  background-color: #dadada;
 }
 section .portfolio .container .warp-card .row .col-01 img {
-  border-radius: 60px 0px 0px 0px;
   width: 350px;
+  border-radius: 60px 0px 0px 0px;
   height: auto;
 }
 section .portfolio .container .warp-card .row .col-content {
@@ -785,11 +786,12 @@ section .portfolio .container .warp-card .row:hover {
 section .portfolio .container .warp-card .row .col-02 {
   overflow: hidden;
   height: 240px;
-  background-color: #f1f102;
+  border-radius: 60px 0px 0px 0px;
+  background-color: #dadada;
 }
 section .portfolio .container .warp-card .row .col-02 img {
-  border-radius: 60px 0px 0px 0px;
   width: 350px;
+  border-radius: 60px 0px 0px 0px;
   height: auto;
 }
 section .portfolio .container .warp-card .row .col-content {
@@ -850,11 +852,12 @@ section .portfolio .container .warp-card .row:hover {
 section .portfolio .container .warp-card .row .col-03 {
   overflow: hidden;
   height: 240px;
-  background-color: #f1f102;
+  border-radius: 60px 0px 0px 0px;
+  background-color: #dadada;
 }
 section .portfolio .container .warp-card .row .col-03 img {
-  border-radius: 60px 0px 0px 0px;
   width: 350px;
+  border-radius: 60px 0px 0px 0px;
   height: auto;
 }
 section .portfolio .container .warp-card .row .col-content {
