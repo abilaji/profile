@@ -18,8 +18,8 @@
       <li><a href="#" onchange="return Scroll('home')"> home </a></li>
       <li><a href="#about" onclick="return Scroll('about')"> about </a></li>
       <li><a href="#skill" onclick="return Scroll('skill')"> skills </a></li>
-      <li><a href="#"> portfolio </a></li>
-      <li><a href="#"> contact </a></li>
+      <li><a href="#portfolio" onclick="return Scroll('portfolio')" > portfolio </a></li>
+      <li><a href="#contact" onclick="return Scroll('contact')"> contact </a></li>
     </ul>
     <div class="menuTogle"></div>
     <!-- </div> -->
@@ -188,58 +188,108 @@
               </div>
             </div>
           </div>
-          <div class="portfolio">
+          <div class="portfolio" id="portfolio">
             <div class="container">
               <div class="text">
                 <h1>Portfolio</h1>
                 <h3>Most recent work <span></span></h3>
               </div>
               <div class="warp-card">
-              <div class="row">
-                <div class="col-01">
-                  <div class="back-banner">     
+                <div class="row">
+                  <div class="col-01">
                     <img src="./assets/img/wisata.jpg" alt="">
-                    <div class="content">
-                      <h3>ux research</h3>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, obcaecati.</p>
-                      <h4><a href="#">view more</a><img src="./assets/icon/right.svg" alt="arrow"></h4>
-                    </div>
-                  </div>                  
+                  </div>
+                  <div class="col-content">
+                      <div class="content">
+                        <h3>ux research</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, obcaecati.</p>
+                        <h4><a href="#">view more</a><img src="./assets/icon/right.svg" alt="arrow"></h4>
+                      </div>
+                  </div>
                 </div>
-              </div>
-
-              <div class="row">
-                <div class="col-02">
-                  <div class="back-banner">     
-                    <img src="./assets/img/api.jpg" alt="">
-                    <div class="content">
-                      <h3>cinema list</h3>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, obcaecati.</p>
-                      <h4><a href="#">view more</a><img src="./assets/icon/right.svg" alt="arrow"></h4>
-                    </div>
-                  </div>                  
+                <div class="row">
+                  <div class="col-02">
+                    <img src="./assets/img/api.jpg" alt="movie" style="width:450px;">
+                  </div>
+                  <div class="col-content">
+                      <div class="content">
+                        <h3>list the movie</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, obcaecati.</p>
+                        <h4><a href="#">view more</a><img src="./assets/icon/right.svg" alt="arrow"></h4>
+                      </div>
+                  </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-03">
-                  <div class="back-banner">     
+                <div class="row">
+                  <div class="col-03">
                     <img src="./assets/img/reactJS.jpg" alt="">
-                    <div class="content">
-                      <h3>user api</h3>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, obcaecati.</p>
-                      <h4><a href="#">view more</a><img src="./assets/icon/right.svg" alt="arrow"></h4>
-                    </div>
-                  </div>                  
+                  </div>
+                  <div class="col-content">
+                      <div class="content">
+                        <h3>reactJS</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, obcaecati.</p>
+                        <h4><a href="#">view more</a><img src="./assets/icon/right.svg" alt="arrow"></h4>
+                      </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
           </div>
         </div>
       </div>
     </div>
     </div>
   </section>
+
+  <div class="judul">
+    <h1>Contact me</h1>
+    <h3>For business inquiries <span></span></h3>
+  </div>
+  <footer id="contact">
+    <div class="content">
+      <div class="contact">
+        <div class="telp">
+          <img src="./assets/icon/telepon.svg" alt="">
+          <div class="contact-person">
+            <h3>call me</h3>
+            <p>0895 0663 5507</p>
+          </div>
+        </div>
+
+        <div class="linkedin">
+          <img src="./assets/icon/linkedin.svg" alt="">
+          <div class="contact-person">
+            <h3>linkedin</h3>
+            <p>abilaji</p>
+          </div>
+        </div>
+
+        <div class="git">
+          <img src="./assets/icon/github.svg" alt="">
+          <div class="contact-person">
+            <h3>github</h3>
+            <p>abilaji</p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form action="">
+          <div class="label-class">
+            <label for="name"></label>
+            <input type="text" id="#" name="name" placeholder="name">
+            <label for="name"></label>
+            <input type="text" id="#" name="name" placeholder="email">
+          </div>
+          <textarea class="text" name="subject" id="#" cols="#" rows="#" placeholder="write something.."></textarea>
+          <button>Send Message<img src="./assets/icon/send.svg" alt=""></button>
+        </form>
+      </div>
+      <div class="foto">
+        <img src="./assets/img/foto_01.png" alt="abilaji">
+      </div>
+    </div>
+  </footer>
+
+
   <script src="js/script.js"></script>
 </body>
 

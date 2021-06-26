@@ -11,7 +11,7 @@ body {
   background-color: #f6faff;
   // overflow untuk menyembynikan apa bila ada yg offside
   overflow-x: hidden;
-  margin-bottom: 1000px;
+  // margin-bottom: 1000px;
 }
 
 nav {
@@ -148,16 +148,16 @@ nav {
 
   &::after {
     content: "";
+    top: 0;
+    background-color: #464646;
     display: block;
     width: 80%;
-    height: 100%;
+    height: inherit;
     margin-bottom: 0;
     background: rgb(230, 229, 229);
-    background: linear-gradient(
-      to left,
-      rgba(0, 0, 0, 0) 5%,
-      rgba(255, 255, 255, 1) 100%
-    );
+    background: linear-gradient(to left,
+        rgba(0, 0, 0, 0) 5%,
+        rgba(255, 255, 255, 1) 100%);
     position: absolute;
     z-index: 1;
     bottom: 0;
@@ -496,6 +496,7 @@ section {
         }
 
         .content-desain {
+
           // awal dropdown desain
           .desain {
             @include shadow-skills();
@@ -590,36 +591,21 @@ section {
   // portofolio
   .portfolio {
     .container {
-      .text {
-      }
+      .text {}
 
       .warp-card {
         display: flex;
         justify-content: space-around;
 
         .row {
-          display: block;
-          width: 25%;
-          margin-top: 10vh;
-          height: auto;
-          height: 400px;
-          cursor: pointer;
-          border-radius: 10px;
-          background-color: #f6faff;
-          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-            rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+          @include row;
 
-          &:hover {
-            transform: scale(1.02);
-            transition: 0.5s;
-          }
           .col-01 {
-            @include port-col;
+            @include col-banner;
+          }
 
-            .back-banner {
-              @include port-banner;
-            }
+          .col-content {
+            @include port-col;
 
             .content {
               width: auto;
@@ -627,27 +613,39 @@ section {
               @include port-content;
             }
           }
+        }
+
+        .row {
+          @include row;
 
           .col-02 {
+            @include col-banner;
+          }
+
+          .col-content {
             @include port-col;
 
-            .back-banner {
-              @include port-banner;
-            }
-
             .content {
+              width: auto;
+              // background-color: #00a149;
               @include port-content;
             }
           }
+        }
+
+        .row {
+          @include row;
 
           .col-03 {
+            @include col-banner;
+          }
+
+          .col-content {
             @include port-col;
 
-            .back-banner {
-              @include port-banner;
-            }
-
             .content {
+              width: auto;
+              // background-color: #00a149;
               @include port-content;
             }
           }
@@ -657,4 +655,135 @@ section {
   }
 }
 
-@import "responsive";
+.judul {
+  padding-top: 20vh;
+  text-align: center;
+  color: $color-01;
+  h1{
+    @include judul-h1();
+  }
+  h3{
+    @include judul-h3();
+  }
+}
+
+footer {
+  margin-top: 10vh;
+  width: 100%;
+  height: 400px;
+  background-color: $color-01;
+  overflow: hidden;
+
+  .content {
+    display: flex;
+    justify-content: space-evenly;
+
+    .contact {
+      // background-color: bisque;
+      padding-left: 40px;
+      margin-top: 50px;
+      display: block;
+      width: 250px;
+      margin: 10;
+
+      .telp {
+        color: $color-02;
+        // background-color: #00a149;
+        @include contact-person();
+      }
+
+      .linkedin {
+        margin: 30px auto;
+        color: $color-02;
+        @include contact-person();
+      }
+
+      .git {
+        color: $color-02;
+        @include contact-person();
+      }
+
+      img {
+        padding-top: 10px;
+        float: left;
+        width: 10%;
+        margin-right: 25px;
+      }
+    }
+
+    .contact-form {
+      form {
+        display: block;
+        box-sizing: border-box;
+        // width: 100%;
+        margin-top: 50px;
+        // background-color: lightgreen;
+        // .label-class{
+        // background-color: coral;
+
+        input {
+          width: 45%;
+          float: left;
+          margin-right: 21px;
+          padding: 12px;
+          color: $color-01;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          color: $color-01;
+          box-sizing: border-box;
+          // margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+          // }
+        }
+
+        textarea {
+          padding: 12px;
+          width: 90%;
+          height: 150px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          color: $color-01;
+          // box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+        }
+
+        button {
+          background-color: #04aa6d;
+          width: 40%;
+          color: white;
+          padding: 12px 5px;
+          border: none;
+          font-weight: 100;
+          border-radius: 6px;
+          cursor: pointer;
+          float: left;
+          font-size: 1.1em;
+
+          &:hover {
+            background-color: #45a049;
+          }
+
+          img {
+            margin-left: 10px;
+            width: 7%;
+          }
+        }
+      }
+    }
+  }
+
+  .foto {
+    // background-color: aqua;
+    display: flex;
+    height: auto;
+
+    img {
+      width: 82%;
+      height: auto
+    }
+  }
+}
+
+  @import "responsive";
