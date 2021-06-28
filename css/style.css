@@ -974,6 +974,11 @@ footer .content .contact .linkedin .contact-person h3 {
 footer .content .contact .linkedin .contact-person p {
   font-size: 0.6em;
 }
+footer .content .contact .linkedin a {
+  color: #02eb21;
+  text-decoration: none;
+  font-size: 0.8em;
+}
 footer .content .contact .git {
   color: #ffffff;
 }
@@ -982,6 +987,11 @@ footer .content .contact .git .contact-person h3 {
 }
 footer .content .contact .git .contact-person p {
   font-size: 0.6em;
+}
+footer .content .contact .git a {
+  color: #02eb21;
+  text-decoration: none;
+  font-size: 0.8em;
 }
 footer .content .contact img {
   padding-top: 10px;

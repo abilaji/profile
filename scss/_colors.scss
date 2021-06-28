@@ -245,9 +245,8 @@ $font-18: 18px;
 // footer
 @mixin contact-person() {
   .contact-person {
-    font-size: 0.9em;
+    font-size: 1em;
     margin-right: 20px;
-
     p {
       color: #adadad;
     }
