@@ -1020,6 +1020,7 @@ footer .content .contact-form form textarea {
 footer .content .contact-form form button {
   background-color: #04aa6d;
   width: 40%;
+  float: left;
   color: white;
   padding: 12px 5px;
   border: none;
@@ -1027,14 +1028,24 @@ footer .content .contact-form form button {
   border-radius: 6px;
   cursor: pointer;
   float: left;
+  margin-right: 20px;
   font-size: 1.1em;
+  box-shadow: #014713 -4px 3px 2px 0px;
+}
+footer .content .contact-form form button:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
 }
 footer .content .contact-form form button:hover {
-  background-color: #45a049;
+  background-color: #00a149;
 }
 footer .content .contact-form form button img {
   margin-left: 10px;
   width: 7%;
+}
+footer .content .contact-form form .alert {
+  display: none;
 }
 footer .foto {
   display: flex;

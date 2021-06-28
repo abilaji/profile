@@ -17,38 +17,37 @@ togles.addEventListener("click", () => {
 const textSpan = document.querySelector('.typed-text');
 const cursorSpan = document.querySelector('.cursor')
 
-const textArray = ["Frontend developer","Web designer","UI/UX designer"];
+const textArray = ["Frontend developer", "Web designer", "UI/UX designer"];
 let textArrIndex = 0;
 let i = 0;
 
-function type(){
-  if(i<textArray[textArrIndex].length){
-    if(!cursorSpan.classList.contains('typing')) cursorSpan.classList.add('typing');
+function type() {
+  if (i < textArray[textArrIndex].length) {
+    if (!cursorSpan.classList.contains('typing')) cursorSpan.classList.add('typing');
     textSpan.textContent += textArray[textArrIndex].charAt(i);
     i++;
     setTimeout(type, 100);
-  }
-  else {
+  } else {
     cursorSpan.classList.remove('typing');
     setTimeout(erase, 2000);
   }
+
   function erase() {
-    if(i > 0){
-      if(!cursorSpan.classList.contains('typing')) cursorSpan.classList.add('typing');
-      textSpan.textContent = textArray[textArrIndex].substring(0,i-1);
+    if (i > 0) {
+      if (!cursorSpan.classList.contains('typing')) cursorSpan.classList.add('typing');
+      textSpan.textContent = textArray[textArrIndex].substring(0, i - 1);
       i--;
-      setTimeout(erase,100);
-    }
-    else{
+      setTimeout(erase, 100);
+    } else {
       cursorSpan.classList.remove('typing');
       textArrIndex++;
-      if(textArrIndex >= textArray.length) textArrIndex=0;
+      if (textArrIndex >= textArray.length) textArrIndex = 0;
       setTimeout(type, 200 + 1100);
     }
   }
 }
-document.addEventListener('DOMContentLoaded', function(){
-  if(textArray.length);
+document.addEventListener('DOMContentLoaded', function () {
+  if (textArray.length);
   setTimeout(type, 2000 + 250);
 });
 // function typing(){
@@ -61,27 +60,26 @@ document.addEventListener('DOMContentLoaded', function(){
 // typing();
 
 //smoothScroll
-let posY=0;
-const jarak=15;
+let posY = 0;
+const jarak = 15;
 
-function Scroll(id){
+function Scroll(id) {
   const target = document.getElementById(id).offsetTop;
 
-  const scrollAnimate = setTimeout(function(){
+  const scrollAnimate = setTimeout(function () {
     Scroll(id);
   }, 5);
 
-    posY = posY + jarak;
-    // pengkondisian
-    if(posY >= target){
-      clearTimeout(scrollAnimate);
-      posY=0;
-    } 
-    else{
-      window.scroll(0, posY);
-    }
-    return false;
-} 
+  posY = posY + jarak;
+  // pengkondisian
+  if (posY >= target) {
+    clearTimeout(scrollAnimate);
+    posY = 0;
+  } else {
+    window.scroll(0, posY);
+  }
+  return false;
+}
 // const content = document.querySelector('.main-content');
 // scrollnav.init(content);
 
@@ -101,7 +99,7 @@ function myFunction() {
 }
 
 //Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (!event.target.matches('.dropbtn')) {
     const dropdowns = document.getElementsByClassName("dropdown-content");
     let i;
@@ -115,10 +113,10 @@ window.onclick = function(event) {
 }
 
 
-function desainList(){
+function desainList() {
   document.getElementById("dropdown").classList.toggle('showDesain');
 }
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (!event.target.matches('.dropDesain')) {
     const drop_downs = document.getElementsByClassName("dropdownDesain");
     let i;
@@ -130,3 +128,23 @@ window.onclick = function(event) {
     }
   }
 }
+
+// send contact form
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzY8ZjPOtXfBJyZXIDORR4VNxyJTDnjk7tliwrsnQtvvMf-zWOAexllMkThNuWBDyoA/exec'
+const form = document.forms['my-contact']
+const btnKirm = document.querySelector('.btn-kirim')
+const myAlert = document.querySelector('.alert')
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, {
+      method: 'POST',
+      body: new FormData(form)
+    })
+    .then(response => {
+      myAlert.classList.toggle('alert')
+      form.reset()
+      console.log('Success!', response)
+    })
+    .catch(error => console.error('Error!', error.message))
+})
