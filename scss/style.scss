@@ -155,9 +155,11 @@ nav {
     height: inherit;
     margin-bottom: 0;
     background: rgb(230, 229, 229);
-    background: linear-gradient(to left,
-        rgba(0, 0, 0, 0) 5%,
-        rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0) 5%,
+      rgba(255, 255, 255, 1) 100%
+    );
     position: absolute;
     z-index: 1;
     bottom: 0;
@@ -260,37 +262,34 @@ section {
           margin-left: 100px;
           width: 100vh;
           text-align: left;
-
-          button {
-            font-family: $f-poppins;
-            font-size: 1.2em;
-            background-color: $color-03;
-            border: none;
-            border-radius: 8px;
-            padding: 18px 34px;
-            color: $color-02;
-            cursor: pointer;
-            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-
-            &:active {
-              position: relative;
-              top: 7px;
-              box-shadow: none;
-            }
-
-            &:hover {
-              background-color: #00a149;
-            }
-
-            img {
-              border-radius: unset;
-              box-shadow: unset;
-              color: $color-02 !important;
-              width: 0.9em;
-              margin-left: 10px;
-
-              svg path {
-                fill: ivory;
+          .btn-download {
+            // background-color: #00a149;
+            a {
+              background-color: #f44336;
+              color: white;
+              border-radius: 8px;
+              padding: 14px 20px;
+              text-align: center;
+              text-decoration: none;
+              margin: 0 auto;
+              display: inline-block;
+              background-color: $color-03;
+              box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+              &:active {
+                position: relative;
+                top: 7px;
+                box-shadow: none;
+              }
+  
+              &:hover {
+                background-color: #00a149;
+              }
+              
+              img {
+                margin-left: 5px;
+                border-radius: 0;
+                width: 5%;
+                box-shadow: none;
               }
             }
           }
@@ -496,7 +495,6 @@ section {
         }
 
         .content-desain {
-
           // awal dropdown desain
           .desain {
             @include shadow-skills();
@@ -591,7 +589,8 @@ section {
   // portofolio
   .portfolio {
     .container {
-      .text {}
+      .text {
+      }
 
       .warp-card {
         display: flex;
@@ -659,10 +658,10 @@ section {
   padding-top: 20vh;
   text-align: center;
   color: $color-01;
-  h1{
+  h1 {
     @include judul-h1();
   }
-  h3{
+  h3 {
     @include judul-h3();
   }
 }
@@ -696,7 +695,7 @@ footer {
         margin: 30px auto;
         color: $color-02;
         @include contact-person();
-        a{
+        a {
           color: #02eb21;
           text-decoration: none;
           font-size: 0.8em;
@@ -706,7 +705,7 @@ footer {
       .git {
         color: $color-02;
         @include contact-person();
-        a{
+        a {
           color: #02eb21;
           text-decoration: none;
           font-size: 0.8em;
@@ -789,7 +788,7 @@ footer {
             width: 7%;
           }
         }
-        .alert{
+        .alert {
           display: none;
         }
       }
@@ -803,9 +802,9 @@ footer {
 
     img {
       width: 82%;
-      height: auto
+      height: auto;
     }
   }
 }
 
-  @import "responsive";
+@import "responsive";

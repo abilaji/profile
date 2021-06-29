@@ -239,34 +239,31 @@ section .container .about .content-about .text-about {
   width: 100vh;
   text-align: left;
 }
-section .container .about .content-about .text-about button {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.2em;
-  background-color: #107020;
-  border: none;
+section .container .about .content-about .text-about .btn-download a {
+  background-color: #f44336;
+  color: white;
   border-radius: 8px;
-  padding: 18px 34px;
-  color: #ffffff;
-  cursor: pointer;
+  padding: 14px 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto;
+  display: inline-block;
+  background-color: #107020;
   box-shadow: #26394d 0px 20px 30px -10px;
 }
-section .container .about .content-about .text-about button:active {
+section .container .about .content-about .text-about .btn-download a:active {
   position: relative;
   top: 7px;
   box-shadow: none;
 }
-section .container .about .content-about .text-about button:hover {
+section .container .about .content-about .text-about .btn-download a:hover {
   background-color: #00a149;
 }
-section .container .about .content-about .text-about button img {
-  border-radius: unset;
-  box-shadow: unset;
-  color: #ffffff !important;
-  width: 0.9em;
-  margin-left: 10px;
-}
-section .container .about .content-about .text-about button img svg path {
-  fill: ivory;
+section .container .about .content-about .text-about .btn-download a img {
+  margin-left: 5px;
+  border-radius: 0;
+  width: 5%;
+  box-shadow: none;
 }
 section .container .about .content-about .text-about .project-about {
   display: flex;
